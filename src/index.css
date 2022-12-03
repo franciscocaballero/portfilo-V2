@@ -1,13 +1,81 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-bg: #fafafc;
+  --color-netural: #ede8e8;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --container-width-large: 75%;
+  --container-width-md: 86%;
+  --container-width-md: 90%;
+
+  --font-main: "Satoshi", sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-black);
+  font-family: var(--font-main);
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 45px;
+  background-color: var(--color-netural);
+  width: 300px;
+  padding: 8px 0px;
+}
+.nav-menu_option {
+  padding: 5px 10px;
+  font-weight: medium;
+  border-radius: 45px;
+}
+.nav-menu_option:hover {
+  cursor: pointer;
+  color: red;
+}
+.nav-menu_option--hightlight {
+  background-color: var(--color-white);
+}
+/* ============== MEDIA QUERIES (SMALL DEVICECS) ===================== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .contact-button {
+    display: none;
+  }
+}
+/* ============== MEDIA QUERIES (MEDIUM DEVICECS) ===================== */
+/* ============== MEDIA QUERIES (LARGE DEVICECS) ===================== */
