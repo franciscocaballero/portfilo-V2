@@ -132,6 +132,9 @@ nav {
   max-width: 100px;
 }
 
+.map-container {
+  height: 400px;
+}
 /* ============== MEDIA QUERIES (SMALL DEVICECS) ===================== */
 @media (max-width: 600px) {
   nav {
