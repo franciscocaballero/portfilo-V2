@@ -51,6 +51,10 @@ nav {
   align-items: center;
   padding: 20px 50px;
 }
+/* .container {
+  max-width: var(--container-width-sm);
+  margin: 0 auto;
+} */
 
 .nav-logo {
   font-size: 20px;
@@ -79,10 +83,6 @@ nav {
   background-color: var(--color-white);
 }
 
-.container {
-  max-width: var(--container-width-sm);
-  margin: 0 auto;
-}
 /* ============== GRID PROPS ===================== */
 .grid {
   display: grid;
@@ -100,19 +100,15 @@ nav {
   align-items: center;
 }
 .flex-colum {
-  display: flex;
   flex-direction: column;
 }
 
-/* ========   Buttons ==== */
-.social-item-container {
-  position: relative;
-}
-.link-btn {
+/* ========   Button && Toggles Props ==== */
+
+.btn {
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background: var(--color-white);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -123,51 +119,21 @@ nav {
   bottom: 14px;
   left: 14px;
 }
-.link-btn:hover {
+.btn:hover {
   transition: ease-out 0.2s;
   outline: 5px solid rgb(255, 255, 255, 0.5);
 }
-.link-btn-icon {
+
+.btn--white {
+  background: var(--color-white);
+}
+.btn__icon {
   height: auto;
   width: 15px;
 }
+
 .radius {
   border-radius: 25px;
-}
-
-.social-item-container__twitter {
-  background: var(--color-blue);
-}
-.social-item-container__github {
-  background: var(--color-purple);
-}
-
-.social-icon {
-  height: auto;
-  width: 60px;
-}
-
-.bio-container {
-  background: var(--color-white);
-  padding: 36px 42px;
-  grid-column: span 2;
-}
-
-.bio-container__image {
-  max-width: 100px;
-}
-
-.project-container {
-  background: var(--color-white);
-  position: relative;
-  grid-row: span 2;
-}
-
-.darkmode-container {
-  background: var(--color-white);
-}
-.applemusic-container {
-  background: var(--color-white);
 }
 
 .switch {
@@ -231,12 +197,55 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-/* ============== mapboxgl PROPS ===================== */
 
-.mapboxgl-canvas {
-  width: 200px;
-  height: 600px;
+/*========= Containers ======= */
+
+.container {
+  border-radius: 25px;
+  padding: 36px 42px;
 }
+.container--bio {
+  background: var(--color-white);
+  grid-column: span 2;
+}
+.container--bio__image {
+  max-width: 100px;
+}
+.container--bio__name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container--social {
+  position: relative;
+}
+
+.bgColor--blue {
+  background: var(--color-blue);
+}
+.bgColor--purple {
+  background: var(--color-purple);
+}
+
+.container--social__icon {
+  height: auto;
+  width: 60px;
+}
+
+.project-container {
+  background: var(--color-white);
+  position: relative;
+  grid-row: span 2;
+}
+
+.darkmode-container {
+  background: var(--color-white);
+}
+.applemusic-container {
+  background: var(--color-white);
+}
+
+/* ============== mapboxgl PROPS ===================== */
 .mapboxgl-marker {
   border: 5px solid #fff;
   border-radius: 50%;
@@ -261,7 +270,7 @@ input:checked + .slider:before {
   nav {
     flex-direction: column;
   }
-  .bio-container {
+  .container--bio {
     grid-column: span 2;
     grid-row: span 2;
   }
