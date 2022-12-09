@@ -83,19 +83,14 @@ nav {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  grid-auto-rows: 300px;
   gap: 20px 20px;
 }
-
-.grid-col-span-1 {
-  grid-column: span 1;
-}
-.grid-col-span-2 {
-  grid-column: span 2;
-}
-.grid-row-span-2 {
-  grid-row: span 2;
+.grid-item {
+  height: 100%;
+  width: 100%;
 }
 
 /* ============== Flex PROPS ===================== */
@@ -127,35 +122,17 @@ nav {
 
 .bio-container {
   background: var(--color-white);
+  grid-column: span 2;
 }
+
 .bio-container__image {
   max-width: 100px;
 }
 
-.map-container {
-  height: 400px;
-}
-
-.sidebar {
-  background-color: rgba(35, 55, 75, 0.9);
-  color: #fff;
-  padding: 6px 12px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 12px;
-  border-radius: 4px;
-}
-
-.marker {
-  background-image: url("../public/images/me.png");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
+.mapboxgl-canvas {
+  width: 200px;
+  height: 600px;
+  border-radius: 50px;
 }
 .mapboxgl-marker {
   border: 5px solid #fff;
@@ -165,9 +142,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: rgba(51, 170, 51, 0.4);
+  background: rgba(93, 161, 224, 0.4);
 }
+
 .mapboxgl-ctrl-bottom-right,
 .mapboxgl-ctrl-bottom-left {
   display: none;
@@ -177,10 +154,14 @@ nav {
   nav {
     flex-direction: column;
   }
-
+  .bio-container {
+    grid-column: span 1;
+  }
   .contact-button {
+    transition: ease-in-out 0.2s;
     display: none;
   }
 }
 /* ============== MEDIA QUERIES (MEDIUM DEVICECS) ===================== */
+
 /* ============== MEDIA QUERIES (LARGE DEVICECS) ===================== */
