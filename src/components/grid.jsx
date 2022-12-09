@@ -28,45 +28,98 @@ export const Grid = () => {
             developement.
           </p>
         </div>
-        <div className="grid-item grid-col-span-1">
-          <div className=" social-item-container social-item-container__twitter radius flex">
+        <div className=" social-item-container social-item-container__twitter radius flex">
+          <img
+            className="social-icon"
+            src="images/twitter.png"
+            alt="Twitter bird"
+          />
+          <a
+            className="link-btn"
+            target="_blank”"
+            href="https://twitter.com/ciscocaballero"
+          >
             <img
-              className="twitter-icon"
-              src="images/twitter.png"
-              alt="Twitter bird"
+              className="link-btn-icon"
+              src="images/right-arrow.png"
+              alt="right-arrow"
             />
-          </div>
+          </a>
         </div>
-        <div className="grid-item grid-col-span-1">
-          <div className=" social-item-container social-item-container__twitter radius flex">
+        <div className="social-item-container social-item-container__github radius flex">
+          <img
+            className="social-icon"
+            src="images/github.png"
+            alt="Twitter bird"
+          />
+          <a
+            className="link-btn"
+            target="_blank”"
+            href="https://github.com/franciscocaballero"
+          >
             <img
-              className="twitter-icon"
-              src="images/github.png"
-              alt="Twitter bird"
+              className="link-btn-icon"
+              src="images/right-arrow.png"
+              alt="right-arrow"
             />
-          </div>
+          </a>
         </div>
-        <div className="grid-item grid-row-span-1">
-          <div className="radius">
-            <Map
-              {...viewState}
-              onMove={(evt) => setViewState(evt.viewState)}
-              mapStyle="mapbox://styles/mapbox/streets-v9"
-              style={{ width: 300, height: 300 }}
-              mapboxAccessToken={MAPBOX_TOKEN}
-            >
-              <Marker longitude={-77.0408} latitude={38.8915} anchor="bottom">
-                <img
-                  className="me"
-                  src="images/me.png"
-                  alt="Profile"
-                  style={{ width: "20px" }}
-                />
-              </Marker>
-            </Map>
-          </div>
+        <div className="mapbox-container">
+          <Map
+            className="radius"
+            {...viewState}
+            onMove={(evt) => setViewState(evt.viewState)}
+            mapStyle="mapbox://styles/mapbox/streets-v9"
+            style={{ width: 300, height: 300 }}
+            mapboxAccessToken={MAPBOX_TOKEN}
+          >
+            <Marker longitude={-77.0408} latitude={38.8915} anchor="bottom">
+              <img
+                className="me"
+                src="images/me.png"
+                alt="Profile"
+                style={{ width: "20px" }}
+              />
+            </Marker>
+          </Map>
+          <a className="link-btn" target="_blank”" href="#">
+            <img
+              className="link-btn-icon"
+              src="images/zoom-out.png"
+              alt="minus--"
+            />
+          </a>
         </div>
-        <div className="item-1">Hello</div>
+        <div className="project-container radius">
+          <a className="link-btn" target="_blank”" href="#">
+            <img
+              className="link-btn-icon"
+              src="images/zoom-out.png"
+              alt="minus"
+            />
+          </a>
+        </div>
+        <div className="project-container radius">
+          <a className="link-btn" target="_blank”" href="#">
+            <img
+              className="link-btn-icon"
+              src="images/zoom-out.png"
+              alt="minus"
+            />
+          </a>
+        </div>
+        <div className="darkmode-container radius">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div className="applemusic-container radius">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
       </div>
     </div>
   );
