@@ -20,9 +20,11 @@ canvas {
 :root {
   --color-bg: #fafafc;
   --color-netural: #ede8e8;
+  --color-grey: #f4f4f4;
   --color-white: #fff;
   --color-black: #000;
   --color-blue: #a3cffb;
+  --color-green: #5bc236;
   --color-purple: #9f6bec;
 
   --container-width-large: 75%;
@@ -37,10 +39,10 @@ canvas {
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--font-main);
-  font-size: 16px;
+  font-size: 20px;
 }
 
 nav {
@@ -51,10 +53,10 @@ nav {
   align-items: center;
   padding: 20px 50px;
 }
-/* .container {
-  max-width: var(--container-width-sm);
+.container-main {
+  max-width: var(--container-width-large);
   margin: 0 auto;
-} */
+}
 
 .nav-logo {
   font-size: 20px;
@@ -89,7 +91,7 @@ nav {
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
   grid-auto-rows: 300px;
-  gap: 20px 20px;
+  gap: 10px 10px;
 }
 /* ============== Flex PROPS ===================== */
 .flex {
@@ -99,7 +101,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.flex-colum {
+.flex-column {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -176,11 +183,11 @@ nav {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: var(--color-green);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px var(--color-green);
 }
 
 input:checked + .slider:before {
@@ -205,7 +212,7 @@ input:checked + .slider:before {
   padding: 36px 42px;
 }
 .container--bio {
-  background: var(--color-white);
+  background: var(--color-grey);
   grid-column: span 2;
 }
 .container--bio__image {
@@ -220,11 +227,15 @@ input:checked + .slider:before {
   position: relative;
 }
 
+.container--mapbox {
+  position: relative;
+}
 .bgColor--blue {
   background: var(--color-blue);
 }
 .bgColor--purple {
-  background: var(--color-purple);
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
 }
 
 .container--social__icon {
@@ -232,19 +243,50 @@ input:checked + .slider:before {
   width: 60px;
 }
 
-.project-container {
-  background: var(--color-white);
+.container--casestudy {
+  background: var(--color-grey);
   position: relative;
-  grid-row: span 2;
+  grid-column: span 2;
 }
 
-.darkmode-container {
-  background: var(--color-white);
+.container--switch {
+  background: var(--color-grey);
 }
-.applemusic-container {
-  background: var(--color-white);
+.container--music {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/images/metro.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.container--music__header {
+  font-size: 40px;
+  color: var(--color-white);
+}
+.container--music__artist {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 55px;
+  color: var(--color-white);
 }
 
+.container--music__icon {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 13px;
+  height: 13px;
+}
+.container--music__bar {
+  width: 3px;
+  height: 100%;
+  background-color: orange;
+  border-radius: 3px;
+  content: "";
+}
 /* ============== mapboxgl PROPS ===================== */
 .mapboxgl-marker {
   border: 5px solid #fff;
@@ -262,9 +304,6 @@ input:checked + .slider:before {
   display: none;
 }
 
-.mapbox-container {
-  position: relative;
-}
 /* ============== MEDIA QUERIES (SMALL DEVICECS) ===================== */
 @media (max-width: 600px) {
   nav {
@@ -287,3 +326,47 @@ input:checked + .slider:before {
 /* ============== MEDIA QUERIES (MEDIUM DEVICECS) ===================== */
 
 /* ============== MEDIA QUERIES (LARGE DEVICECS) ===================== */
+
+@keyframes bounce {
+  10% {
+    transform: scaleY(0.3); /* start by scaling to 30% */
+  }
+
+  30% {
+    transform: scaleY(1); /* scale up to 100% */
+  }
+
+  60% {
+    transform: scaleY(0.5); /* scale down to 50% */
+  }
+
+  80% {
+    transform: scaleY(0.75); /* scale up to 75% */
+  }
+
+  100% {
+    transform: scaleY(0.6); /* scale down to 60% */
+  }
+}
+
+.container--music__bar {
+  width: 3px;
+  height: 100%;
+  background-color: orange;
+  border-radius: 3px;
+  animation: bounce 2.2s ease infinite alternate;
+  content: "";
+}
+.mc {
+  max-width: 270px;
+  height: auto;
+  justify-content: space-around;
+}
+
+.container--music__bar:nth-of-type(2) {
+  animation-delay: -2.2s; /* Start at the end of animation */
+}
+
+.container--music__bar:nth-of-type(3) {
+  animation-delay: -3.7s; /* Start mid-way of return of animation */
+}

@@ -12,9 +12,9 @@ export const Mapbox = () => {
     zoom: 13.5,
   });
   return (
-    <div className="mapbox-container">
+    <div className="container--mapbox">
       <Map
-        className="radius"
+        className="container"
         {...viewState}
         onMove={(evt) => setViewState(evt.viewState)}
         mapStyle="mapbox://styles/mapbox/streets-v9"
@@ -23,19 +23,14 @@ export const Mapbox = () => {
       >
         <Marker longitude={-77.0408} latitude={38.8915} anchor="bottom">
           <img
-            className="me"
             src="images/me.png"
-            alt="Profile"
+            alt="Mapmark Image"
             style={{ width: "20px" }}
           />
         </Marker>
       </Map>
-      <a className="link-btn" target="_blank”" href="#">
-        <img
-          className="link-btn-icon"
-          src="images/zoom-out.png"
-          alt="minus--"
-        />
+      <a className="btn btn--white" target="_blank”" href="#">
+        <img className="btn__icon" src="images/zoom-out.png" alt="minus" />
       </a>
     </div>
   );

@@ -2,15 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { Bio } from "./bio";
 import { Social } from "./social";
 import { Mapbox } from "./mapbox";
+import { Casestudy } from "./casestudy";
+import { Switch } from "./switch";
+import { Music } from "./music";
 
 export const Grid = () => {
-  const [viewState, setViewState] = React.useState({
-    longitude: -77.0408,
-    latitude: 38.8915,
-    zoom: 13.5,
-  });
   return (
-    <div className="container">
+    <div className="container-main">
       <div className="grid">
         <Bio />
         <Social
@@ -24,37 +22,10 @@ export const Grid = () => {
           className="bgColor--purple"
         />
         <Mapbox />
-
-        <div className="project-container radius">
-          <a className="link-btn" target="_blank”" href="google.com">
-            <img
-              className="link-btn-icon"
-              src="images/zoom-out.png"
-              alt="minus"
-            />
-          </a>
-        </div>
-        <div className="project-container radius">
-          <a className="link-btn" target="_blank”" href="google.com">
-            <img
-              className="link-btn-icon"
-              src="images/zoom-out.png"
-              alt="minus"
-            />
-          </a>
-        </div>
-        <div className="darkmode-container radius">
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-        <div className="applemusic-container radius">
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-        </div>
+        <Casestudy />
+        <Switch />
+        <Music />
+        <Music />
       </div>
     </div>
   );
