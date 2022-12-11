@@ -11,6 +11,7 @@ export const Grid = () => {
     <div className="container-main">
       <div className="grid">
         <Bio />
+        <Mapbox />
         <Social
           link="https://twitter.com/ciscocaballero"
           imgSrc="images/twitter.png"
@@ -21,11 +22,9 @@ export const Grid = () => {
           imgSrc="images/github.png"
           className="bgColor--purple"
         />
-        <Mapbox />
         <Casestudy />
+        <Music />
         <Switch />
-        <Music />
-        <Music />
       </div>
     </div>
   );

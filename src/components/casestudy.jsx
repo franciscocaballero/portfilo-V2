@@ -10,7 +10,7 @@ export const Casestudy = () => {
       >
         <img className="btn__icon" src="images/right-arrow.png" alt="minus" />
       </a>
-      <img src="images/forky.png" />
+      <img className="container--casestudy__image" src="images/forky.png" />
     </div>
   );
 };

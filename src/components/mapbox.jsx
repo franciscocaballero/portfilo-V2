@@ -18,7 +18,7 @@ export const Mapbox = () => {
         {...viewState}
         onMove={(evt) => setViewState(evt.viewState)}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-        style={{ width: 300, height: 300 }}
+        style={{ width: 400, height: 400 }}
         mapboxAccessToken={MAPBOX_TOKEN}
       >
         <Marker longitude={-77.0408} latitude={38.8915} anchor="bottom">
