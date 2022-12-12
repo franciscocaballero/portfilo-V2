@@ -4,7 +4,7 @@ export const Nav = () => {
   return (
     <div>
       <nav>
-        <p className="nav--logo">⚛</p>
+        <p className="nav--logo">Cisco</p>
 
         <ul className="nav-menu">
           <li className="nav-menu_option">All</li>
