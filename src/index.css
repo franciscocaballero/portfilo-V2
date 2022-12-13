@@ -55,7 +55,7 @@ nav {
   font-weight: bold;
 }
 .container-main {
-  max-width: var(--container-width-large);
+  max-width: 2030px;
   margin: 0 auto;
 }
 
@@ -68,21 +68,32 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: var(--color-netural);
   width: 520px;
-  padding: 20px 40px;
+  padding: 10px 10px;
 }
 .nav-menu_option {
-  padding: 5px 10px;
+  padding: 10px 20px;
   font-weight: medium;
-  border-radius: 45px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.nav-pill {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  height: auto;
+  background-color: white;
+  content: ".";
+  visibility: hidden;
 }
 .nav-menu_option:hover {
   cursor: pointer;
-  color: red;
+  color: rgb(175, 175, 175);
 }
-.nav-menu_option--hightlight {
+.active {
   background-color: var(--color-white);
 }
 
@@ -136,7 +147,7 @@ nav {
   background: var(--color-black);
   color: var(--color-white);
   text-align: center;
-  border-radius: 15px;
+  border-radius: 50px;
   padding: 22px 40px;
   font-size: 24px;
 }
