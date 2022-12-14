@@ -54,29 +54,31 @@ export const Nav = () => {
   return (
     <div>
       <nav>
-        <p className="nav--logo">Cisco</p>
+        <div className="nav--container">
+          <p className="nav--logo">cisco</p>
 
-        <ul className="nav-menu" id="parent">
-          {MenuItems.map((item, index) => {
-            return (
-              <li
-                key={index}
-                href={item.url}
-                className={`${item.cName} `}
-                // onClick={onToggleClick}
-              >
-                {item.title}
-              </li>
-            );
-          })}
-        </ul>
-        <a
-          href="mailto:caballerofrancisco22@yahoo.com"
-          target="_blank”"
-          className="btn--contact"
-        >
-          Contact <span>→</span>
-        </a>
+          <ul className="nav-menu" id="parent">
+            {MenuItems.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  href={item.url}
+                  className={`${item.cName} `}
+                  // onClick={onToggleClick}
+                >
+                  {item.title}
+                </li>
+              );
+            })}
+          </ul>
+          <a
+            href="mailto:caballerofrancisco22@yahoo.com"
+            target="_blank”"
+            className="btn--contact"
+          >
+            Contact <span>→</span>
+          </a>
+        </div>
       </nav>
     </div>
   );
