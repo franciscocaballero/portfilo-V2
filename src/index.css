@@ -252,7 +252,7 @@ input:checked + .slider:before {
 .container {
   border-radius: 30px;
   padding: 50px 60px;
-  box-shadow: transparent 0px 0px 0px 2px inset;
+  box-shadow: 0px 3px 15px rgba(166, 166, 166, 0.2);
 }
 
 .container--bio {
@@ -341,28 +341,38 @@ input:checked + .slider:before {
 }
 /* ============== mapboxgl PROPS ===================== */
 .mapboxgl-marker {
-  border: 5px solid #fff;
+  border: 6px solid #fff;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 130px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(93, 161, 224, 0.4);
-}
+  transition: all 0.4s ease;
 
-canvas.mapboxgl-canvas:hover .mapboxgl-marker img {
-  transform: translateX(-9px);
+  transform: translate(0);
+}
+.mapboxgl-marker .mapboxgl-marker-anchor-bottom {
+  transform: translate(0);
+}
+.mapboxgl-canvas-container:hover .mapboxgl-marker {
+  /* transition: all 0.9s ease; */
+  width: 180px;
+  height: 180px;
+  transition: all 0.4s ease;
 }
 .mapboxgl-canvas-container:hover .mapboxgl-marker img {
-  transform: scale(1.2) rotate(1turn);
-  transition: all 0.9s ease;
+  /* transition: all 0.9s ease; */
+  transform: scale(1.5);
+  transition: all 0.4s ease;
 }
-.mapboxgl-canvas-container:hover {
-  zoom: normal;
+.mapboxgl-canvas-container .mapboxgl-marker img {
+  /* transition: all 0.9s ease; */
+  transform: scale(1);
+  transition: all 0.4s ease;
+}
 
-  transition: all 0.6s ease;
-}
 .mapboxgl-ctrl-bottom-right,
 .mapboxgl-ctrl-bottom-left {
   display: none;
