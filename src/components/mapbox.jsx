@@ -14,44 +14,29 @@ export const Mapbox = () => {
   return (
     <div className="container--mapbox">
       <Map
-        className="container"
         {...viewState}
         onMove={(evt) => setViewState(evt.viewState)}
-        // setViewState(evt.viewState);
-        // console.log(evt);
-
         dragPan={false}
+        scrollZoom={false}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-        style={{ width: 400, height: 400 }}
+        style={{
+          width: 400,
+          height: 400,
+          borderRadius: "30px",
+          boxShadow: "0px 3px 15px rgba(166, 166, 166, 0.2)",
+        }}
         mapboxAccessToken={MAPBOX_TOKEN}
-        // minZoom={10}
-        maxZoom={18}
-        // touchPitch={false}
-        // touchZoomRotate={!true}
+        className="container"
       >
-        <Marker longitude={-77.0408} latitude={38.8915} scale={0}>
+        <Marker longitude={-77.0408} latitude={38.8915} scale={2}>
           <img
             src="images/me.png"
             alt="Mapmark Image"
-            style={{ width: "40px" }}
+            style={{ width: "30px", transform: "scale(1)" }}
           />
         </Marker>
-        <NavigationControl showCompass={false} />
+        <NavigationControl showCompass={false} position={"bottom-left"} />
       </Map>
-      <a
-        className="btn btn--white"
-        href="#"
-        onClick={() => setViewState({ zoom: 9 })}
-      >
-        <img className="btn__icon" src="images/zoom-out.png" alt="minus" />
-      </a>
-      <a
-        className="btn btn--zoom"
-        href="#"
-        onClick={() => setViewState({ zoom: 13 })}
-      >
-        <img className="btn__icon" src="images/plus3.png" alt="minus" />
-      </a>
     </div>
   );
 };
