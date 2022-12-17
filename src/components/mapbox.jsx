@@ -32,7 +32,7 @@ export const Mapbox = () => {
           <img
             src="images/me.png"
             alt="Mapmark Image"
-            style={{ width: "30px", transform: "scale(1)" }}
+            style={{ width: "40px" }}
           />
         </Marker>
         <NavigationControl showCompass={false} position={"bottom-left"} />

@@ -22,6 +22,7 @@ img {
   --color-blue: #a3cffb;
   --color-green: #5bc236;
   --color-purple: #9f6bec;
+  --color-rose: #fb455d;
 
   --container-width-large: 75%;
   --container-width-md: 86%;
@@ -46,7 +47,6 @@ body {
 nav {
   width: 100%;
   padding: 80px 100px;
-
   display: flex;
   justify-content: space-around;
 }
@@ -56,7 +56,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   min-width: 2000px;
 }
 .container-main {
@@ -129,18 +128,18 @@ nav {
 
 .btn {
   height: 50px;
-  width: 50px;
+
   border-radius: 100%;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  transition: box-shadow 0.2s ease-out 0s;
+  transition: all 0.2s ease;
 }
-.btn:hover {
-  transition: ease-out 0.2s;
-  outline: 5px solid rgb(255, 255, 255, 0.5);
+.btn:hover,
+.btn--casestudy:hover {
+  transition: all 0.2s ease;
+  outline: 5px solid var(--color-white);
 }
 .btn--contact {
   width: 200px;
@@ -148,7 +147,7 @@ nav {
   color: var(--color-white);
   text-align: center;
   border-radius: 50px;
-  padding: 22px 40px;
+  padding: 22px 20px;
   font-size: 24px;
 }
 
@@ -159,11 +158,25 @@ nav {
 }
 .btn--white {
   background: var(--color-white);
-  will-change: transform;
   bottom: 14px;
   left: 14px;
+  width: 50px;
+  position: absolute;
 }
-
+.btn--casestudy {
+  width: 130px;
+  height: 50px;
+  border-radius: 100px;
+  /* border: 1px solid black; */
+  background-color: white;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  box-shadow: 0px 3px 15px rgba(166, 166, 166, 0.2);
+}
 .btn__icon {
   height: auto;
   width: 15px;
@@ -239,16 +252,20 @@ input:checked + .slider:before {
 
 .container {
   border-radius: 30px;
-  padding: 50px 60px;
+  padding: 45px 60px;
   box-shadow: 0px 3px 15px rgba(166, 166, 166, 0.2);
 }
-
+.container--casestudy__image {
+  background-size: cover;
+  box-shadow: 0px 3px 15px rgba(166, 166, 166, 0.2);
+}
 .container--bio {
   background: var(--color-grey);
   grid-column: span 2;
 }
 .container--bio__image {
   max-width: 120px;
+  height: auto;
 }
 .container--bio__name {
   font-size: 30px;
@@ -256,9 +273,9 @@ input:checked + .slider:before {
   color: var(--color-black);
 }
 .bio--container__bio {
-  line-height: 40px;
-  font-size: 25px;
-  color: rgb(90, 90, 90);
+  line-height: 36px;
+  font-size: 20px;
+  color: rgb(117, 117, 117);
 }
 .container--social {
   position: relative;
@@ -271,7 +288,6 @@ input:checked + .slider:before {
   background: var(--color-blue);
 }
 .bgColor--purple {
-  background-color: #21d4fd;
   background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
 }
 
@@ -281,36 +297,86 @@ input:checked + .slider:before {
 }
 
 .container--casestudy {
-  background: var(--color-grey);
-  position: relative;
+  background: #fefaf8;
+  display: flex;
+  flex-direction: row;
   grid-column: span 2;
-  grid-row: span 2;
+  grid-row: span 1;
+  display: flex;
+  justify-content: space-evenly;
 }
 .container--casestudy__image {
   border-radius: 15px;
+  height: auto;
+}
+.casestudy--image {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url("../public/images/pizza.png");
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px rgba(166, 166, 166, 0.2);
+  border: 5px solid white;
+}
+.casestudy--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.casestudy--info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+.casestudy--logo {
+  border-radius: 10px;
+  width: 60px;
+}
+.casestudy--bio {
+  color: rgb(117, 117, 117);
+  line-height: 30px;
+  font-weight: 400;
 }
 .container--switch {
   background: var(--color-grey);
 }
 .container--music {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/images/metro.png");
-
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(#fb5b73, #fa2f47);
   grid-column: span 1;
   grid-row: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fb4159;
+  position: relative;
+}
+
+.music--note {
+  position: absolute;
+  height: 50px;
+  left: 305px;
+  top: 48px;
 }
 .container--music__header {
-  font-size: 16px;
+  font-size: 30px;
   color: var(--color-white);
+  -webkit-mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
 }
+.container--music__image {
+  height: auto;
+  width: 210px;
+  border-radius: 15px;
+  border: 5px solid var(--color-white);
+}
+
 .container--music__artist {
   text-align: left;
-  font-size: 20px;
-  font-weight: bold;
-  /* line-height: 55px; */
-  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 300;
+  color: #feb4bf;
 }
 
 .container--music__icon {
@@ -320,19 +386,34 @@ input:checked + .slider:before {
   width: 13px;
   height: 13px;
 }
+.music--box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+}
 .container--music__bar {
   width: 3px;
   height: 100%;
-  background-color: orange;
+  background-color: var(--color-white);
   border-radius: 3px;
+  animation: bounce 2.2s ease infinite alternate;
   content: "";
 }
+.container--music__bar:nth-of-type(2) {
+  animation-delay: -2.2s; /* Start at the end of animation */
+}
+
+.container--music__bar:nth-of-type(3) {
+  animation-delay: -3.7s; /* Start mid-way of return of animation */
+}
+
 /* ============== mapboxgl PROPS ===================== */
 .mapboxgl-marker {
   border: 4px solid rgb(255, 255, 255);
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,7 +421,7 @@ input:checked + .slider:before {
   transition: all 0.4s ease;
 }
 .mapboxgl-canvas-container:hover .mapboxgl-marker {
-  animation: grow 0.2s;
+  animation: grow 0.4s;
   transition: all 0.4s ease;
 }
 
@@ -379,10 +460,6 @@ a.mapboxgl-ctrl-logo,
   background-color: var(--color-white);
 }
 
-.mapboxgl-marker-anchor-center {
-  transform: translate(200px, 200px) translate(-50%, -50%) translate(0px, 0px);
-}
-
 /* ============== MEDIA QUERIES (SMALL DEVICECS) ===================== */
 @media (max-width: 800px) {
   nav {
@@ -404,14 +481,17 @@ a.mapboxgl-ctrl-logo,
 /* ============== MEDIA QUERIES (MEDIUM DEVICECS) ===================== */
 
 /* ============== MEDIA QUERIES (LARGE DEVICECS) ===================== */
+
+/* ============== Animations ===================== */
+
 @keyframes grow {
   0% {
     width: 90px;
     height: 90px;
   }
   100% {
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 110px;
   }
 }
 
@@ -452,24 +532,25 @@ a.mapboxgl-ctrl-logo,
   }
 }
 
-.container--music__bar {
-  width: 3px;
-  height: 100%;
-  background-color: orange;
-  border-radius: 3px;
-  animation: bounce 2.2s ease infinite alternate;
-  content: "";
-}
-.mc {
-  max-width: 270px;
-  height: auto;
-  justify-content: space-around;
+/* Make it a marquee */
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.container--music__bar:nth-of-type(2) {
-  animation-delay: -2.2s; /* Start at the end of animation */
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
 }
 
-.container--music__bar:nth-of-type(3) {
-  animation-delay: -3.7s; /* Start mid-way of return of animation */
+/* Make it move */
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }

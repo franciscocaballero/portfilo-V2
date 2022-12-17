@@ -6,21 +6,14 @@ export const Bio = () => {
       <div className="container--bio__image">
         <img src="images/me.png" alt="Profile" />
       </div>
-      <p className="bio--container__bio">
-        Hi👋🏼, I'm <span className="container--bio__name">Francisco</span>, a
-        developer from Arlington VA. I'm interested in Javascript, React,
-        Reading, Health, Jiu jitsu, Design, and all things Web developement.
-      </p>
-      {/* <a
-        href="mailto:caballerofrancisco22@yahoo.com"
-        target="_blank”"
-        className="btn--contact"
-      >
-        Contact <span>→</span>
-      </a> */}
-      {/* <a href="#" className="btn--outline">
-        Contact
-      </a> */}
+      <div>
+        <h1>Francisco Caballero</h1>
+        <p className="bio--container__bio">
+          Hi👋🏼 I'm Francisco, a developer living in Arlington VA. I'm interested
+          in<br></br>HTML, CSS, Javascript, ReactJS, NodeJS, and all things
+          programming.
+        </p>
+      </div>
     </div>
   );
 };
