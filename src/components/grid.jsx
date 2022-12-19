@@ -17,14 +17,15 @@ export const Grid = () => {
           imgSrc="images/twitter.png"
           className="bgColor--blue"
         />
+        <Casestudy />
+        <Casestudy />
+        <Switch />
         <Social
           link="https://github.com/franciscocaballero"
           imgSrc="images/github.png"
           className="bgColor--purple"
         />
-        <Casestudy />
         <Music />
-        <Switch />
       </div>
     </div>
   );

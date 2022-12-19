@@ -185,12 +185,15 @@ nav {
 .radius {
   border-radius: 25px;
 }
+.container--switch {
+  background: var(--color-grey);
+}
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 70px;
+  height: 44px;
 }
 
 /* Hide default HTML checkbox */
@@ -216,8 +219,8 @@ nav {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 36px;
+  width: 36px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -340,9 +343,7 @@ input:checked + .slider:before {
   line-height: 30px;
   font-weight: 400;
 }
-.container--switch {
-  background: var(--color-grey);
-}
+
 .container--music {
   background-image: linear-gradient(#fb5b73, #fa2f47);
   grid-column: span 1;
