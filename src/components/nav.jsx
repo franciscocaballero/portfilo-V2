@@ -53,8 +53,8 @@ export const Nav = () => {
 
   return (
     <div>
-      <nav>
-        <div className="nav-container flex">
+      <nav className="">
+        <div className="nav--container ">
           <p className="nav--logo">cisco</p>
 
           <ul className="nav-menu" id="parent">

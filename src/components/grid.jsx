@@ -19,13 +19,18 @@ export const Grid = (props) => {
         />
         <Casestudy />
         <Casestudy />
-        <Switch toggleTheme={props.toggleTheme} checked={props.checked} />
         <Social
           link="https://github.com/franciscocaballero"
           imgSrc="images/github.png"
           className="bgColor--purple"
         />
+        <Switch toggleTheme={props.toggleTheme} checked={props.checked} />
         <Music />
+        <Social
+          link="https://github.com/franciscocaballero"
+          imgSrc="images/github.png"
+          className="bgColor--purple"
+        />
       </div>
     </div>
   );

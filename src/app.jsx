@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Nav } from "./components/nav";
 import { Grid } from "./components/grid";
-import ReactSwitch from "react-switch";
-import { Switch } from "./components/switch";
 import { createContext } from "react";
 
 export const ThemeContext = createContext(null);
@@ -20,8 +18,6 @@ const App = () => {
       <div className="App" id={theme}>
         <Nav />
         <Grid toggleTheme={toggleTheme} checked={theme === "dark"} />
-
-        {/* <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} /> */}
       </div>
     </ThemeContext.Provider>
   );

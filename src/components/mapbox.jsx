@@ -20,8 +20,6 @@ export const Mapbox = () => {
         scrollZoom={false}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         style={{
-          width: 400,
-          height: 400,
           borderRadius: "30px",
           boxShadow: "0px 3px 15px rgba(166, 166, 166, 0.2)",
         }}
