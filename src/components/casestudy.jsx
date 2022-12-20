@@ -4,7 +4,7 @@ export const Casestudy = () => {
   return (
     <div className="container container--casestudy ">
       <div className="casestudy--info">
-        <img class="casestudy--logo" src="images/fork.png" alt="form" />
+        <img className="casestudy--logo" src="images/fork.png" alt="form" />
         <div className="casestudy--info-box">
           <h1>ForkyJS</h1>
           <p className="casestudy--bio">

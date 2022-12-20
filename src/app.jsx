@@ -1,16 +1,29 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Nav } from "./components/nav";
 import { Grid } from "./components/grid";
+import ReactSwitch from "react-switch";
+import { Switch } from "./components/switch";
 import { createContext } from "react";
 
-export const ThemeContect = createContext(null);
+export const ThemeContext = createContext(null);
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme((current) => (current === "light" ? "dark" : "light"));
+  };
+  const log = (e) => {
+    console.log("hello");
+  };
   return (
-    <div>
-      <Nav />
-      <Grid />
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+        <Nav />
+        <Grid toggleTheme={toggleTheme} checked={theme === "dark"} />
+
+        {/* <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} /> */}
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

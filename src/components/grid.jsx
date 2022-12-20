@@ -6,7 +6,7 @@ import { Casestudy } from "./casestudy";
 import { Switch } from "./switch";
 import { Music } from "./music";
 
-export const Grid = () => {
+export const Grid = (props) => {
   return (
     <div className="container-main">
       <div className="grid">
@@ -19,7 +19,7 @@ export const Grid = () => {
         />
         <Casestudy />
         <Casestudy />
-        <Switch />
+        <Switch toggleTheme={props.toggleTheme} checked={props.checked} />
         <Social
           link="https://github.com/franciscocaballero"
           imgSrc="images/github.png"
