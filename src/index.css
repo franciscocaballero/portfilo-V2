@@ -42,7 +42,7 @@ img {
 }
 
 #dark {
-  background-image: linear-gradient(#2f0b73, #250662, #200448);
+  background-color: #111111;
 }
 body {
   background-color: var(--color-grey);
@@ -76,7 +76,9 @@ nav {
   font-size: 80px;
   font-weight: bold;
 }
-
+#dark .nav--logo {
+  color: var(--color-white);
+}
 .nav-menu {
   display: flex;
   justify-content: space-around;
@@ -171,6 +173,11 @@ nav {
   border-radius: 50px;
   padding: 22px 20px;
   font-size: 24px;
+}
+
+#dark .btn--contact {
+  background: var(--color-white);
+  color: var(--color-black);
 }
 
 .btn--contact:hover span {
@@ -280,14 +287,21 @@ input:checked + .slider:before {
 
 .container {
   border-radius: 30px;
-  padding: 45px 60px;
   box-shadow: var(--box-shadow);
-}
-#light .container {
-  background-color: var(--color-white);
+  border: 5px solid transparent;
 }
 #dark .container {
-  background-color: var(--color-black);
+  border: 5px solid #47c465;
+  border-radius: 30px;
+  border: double 5px transparent;
+  background-image: linear-gradient(#111, #111),
+    linear-gradient(90deg, #cdb8f6, #848ee9);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#light .container {
+  background-color: var(--color-white);
 }
 
 .container--casestudy__image {
@@ -295,8 +309,10 @@ input:checked + .slider:before {
   box-shadow: var(--box-shadow);
 }
 .container--bio {
-  background: var(--color-grey);
   grid-column: span 2;
+}
+.child-padding {
+  padding: 45px 60px;
 }
 .container--bio__image {
   max-width: 120px;
@@ -307,11 +323,21 @@ input:checked + .slider:before {
   font-weight: bold;
   color: var(--color-black);
 }
+
+#dark .container--bio__name {
+  color: rgb(209, 209, 209);
+}
 .bio--container__bio {
   line-height: 36px;
   font-size: 20px;
   color: rgb(117, 117, 117);
 }
+#dark .bio--container__bio {
+  line-height: 36px;
+  font-size: 20px;
+  color: var(--color-white);
+}
+
 .container--social {
   position: relative;
 }
@@ -346,29 +372,23 @@ input:checked + .slider:before {
   border-radius: 15px;
   height: auto;
 }
+
+#dark .casestudy--title {
+  color: var(--color-white);
+}
+
 .casestudy--image {
   flex: 1;
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: url("../public/images/pizza.png");
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-  border: 5px solid var(--color-white);
-}
-.casestudy--image-2 {
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  background-image: url("../public/images/loopstudio.png");
   background-position: cover;
   background-repeat: no-repeat;
   background-size: contain;
-
+  padding: 5px 40px;
+}
+.casestudyImg {
   border-radius: 15px;
-  box-shadow: var(--box-shadow);
-  border: 5px solid var(--color-white);
 }
 .casestudy--info {
   display: flex;
@@ -380,8 +400,8 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 220px;
-  max-width: 300px;
+  min-height: 240px;
+  max-width: 330px;
 }
 .casestudy--logo {
   border-radius: 10px;
@@ -390,8 +410,11 @@ input:checked + .slider:before {
 .casestudy--bio {
   color: rgb(117, 117, 117);
   line-height: 30px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
+}
+#dark .casestudy--bio {
+  color: rgb(209, 209, 209);
 }
 /* ============== Music Container  ===================== */
 .container--music {
@@ -427,7 +450,7 @@ input:checked + .slider:before {
   text-align: left;
   font-size: 24px;
   font-weight: 300;
-  color: #feb4bf;
+  color: #bdbdbd;
 }
 
 .container--music__icon {

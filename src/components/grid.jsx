@@ -30,6 +30,7 @@ export const Grid = (props) => {
           link="https://fork-production.up.railway.app/#5ed6604591c37cdc054bcd09"
           linkTitle="forkyJS"
           backgroundImageClass="casestudy--image"
+          backgroundImage="images/pizza.png"
         />
         <Casestudy
           logo="images/loop.png"
@@ -37,7 +38,8 @@ export const Grid = (props) => {
           description="LoopStudio uses CSS Grid to display the information to the user in a user-friendly interface."
           link="https://loopingsstudios.netlify.app"
           linkTitle="LStudio"
-          backgroundImageClass="casestudy--image-2"
+          backgroundImageClass="casestudy--image"
+          backgroundImage="images/loopstudio.png"
         />
 
         <Music />
