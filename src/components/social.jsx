@@ -2,7 +2,9 @@ import React from "react";
 
 export const Social = (props) => {
   return (
-    <div className={`radius container--social ${props.className} flex`}>
+    <div
+      className={`radius container container--social ${props.className} flex`}
+    >
       <img
         className="container--social__icon"
         src={props.imgSrc}

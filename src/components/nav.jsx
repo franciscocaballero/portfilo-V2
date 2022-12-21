@@ -17,34 +17,7 @@ export const Nav = () => {
         item.classList.add("active");
       });
     });
-    //   if (isActive) {
-    //     document
-    //       .querySelector(".nav-menu_option:nth-child(1)")
-    //   // if (!isActive) {
-    //   //   document.querySelector(".nav-menu_option").classList.remove("active");
-    //   // }
-
-    //   /// Add a swtich
-    //   // }, [isActive]);
-    //   // const onSetActiveMenuItem = (item) => {
-    //   //   if (item !== isActive) {
-    //   //     setIsActive(item);
-    //   //   } else {
-    //   //     setIsActive(""); // handle click on currently active item
-    //   //   }
   }, []);
-
-  // const parent = document.getElementById("parent");
-  // let childNode = parent.childNodes;
-  // var btnsArr = Array.prototype.slice.call(childNode);
-  // console.log(btnsArr);
-  // childNodes.forEach((item) => {
-  //   // console.log(item);
-
-  //   item.addEventListener("click", () => {
-  //     item.classList.add("active");
-  //   });
-  // });
 
   // const onToggleClick = () => {
   //   setIsActive(!isActive);
@@ -64,7 +37,7 @@ export const Nav = () => {
                   key={index}
                   href={item.url}
                   className={`${item.cName} `}
-                  // onClick={onToggleClick}
+                  onClick={item.click}
                 >
                   {item.title}
                 </li>

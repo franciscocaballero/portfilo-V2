@@ -17,14 +17,14 @@ export const Grid = (props) => {
           imgSrc="images/twitter.png"
           className="bgColor--blue"
         />
-        <Casestudy />
-        <Casestudy />
         <Social
           link="https://github.com/franciscocaballero"
           imgSrc="images/github.png"
           className="bgColor--purple"
         />
         <Switch toggleTheme={props.toggleTheme} checked={props.checked} />
+        <Casestudy />
+        <Casestudy />
         <Music />
         <Social
           link="https://github.com/franciscocaballero"
