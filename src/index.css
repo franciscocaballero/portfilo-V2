@@ -52,16 +52,20 @@ body {
 }
 
 nav {
-  padding: 80px 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .nav--container {
-  font-weight: bold;
   display: flex;
+  width: 100%;
+  max-width: 2100px;
   justify-content: space-around;
   align-items: center;
-  max-width: 2000px;
-  height: 100%;
+  padding: 80px 0;
+  align-items: center;
+  font-weight: bold;
 }
 .container-main {
   max-width: 2030px;
@@ -120,17 +124,14 @@ nav {
 .grid-item1 {
   grid-column: 1;
   grid-row: 1 / 2;
-  transition: all 0.2s ease;
 }
 .grid-item2 {
   grid-column: 2;
   grid-row: 1 / 2;
-  transition: all 0.2s ease;
 }
 .grid-item3 {
   grid-column: 2;
   grid-row: 1 / 2;
-  transition: all 0.2s ease;
 }
 /* ============== Flex PROPS ===================== */
 .flex {
@@ -212,8 +213,8 @@ nav {
 .switch {
   position: relative;
   display: inline-block;
-  width: 70px;
-  height: 44px;
+  width: 88px;
+  height: 54px;
 }
 
 /* Hide default HTML checkbox */
@@ -238,9 +239,12 @@ nav {
 
 .slider:before {
   position: absolute;
-  content: "";
-  height: 36px;
-  width: 36px;
+  content: "🌙";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 46px;
   left: 4px;
   bottom: 4px;
   background-color: var(--color-white);
@@ -260,6 +264,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  content: "☀️";
 }
 
 /* Rounded sliders */
@@ -320,6 +325,9 @@ input:checked + .slider:before {
 .bgColor--purple {
   background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
 }
+.bgColor--dark-blue {
+  background-image: linear-gradient(19deg, #0072b1 0%, #0072b1 100%);
+}
 
 .container--social__icon {
   height: auto;
@@ -348,6 +356,20 @@ input:checked + .slider:before {
   box-shadow: var(--box-shadow);
   border: 5px solid var(--color-white);
 }
+.casestudy--image-2 {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url("../public/images/loopstudio.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  border: 5px solid var(--color-white);
+}
 .casestudy--info {
   display: flex;
   flex-direction: column;
@@ -358,7 +380,8 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 200px;
+  min-height: 220px;
+  max-width: 300px;
 }
 .casestudy--logo {
   border-radius: 10px;
@@ -367,7 +390,8 @@ input:checked + .slider:before {
 .casestudy--bio {
   color: rgb(117, 117, 117);
   line-height: 30px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
 }
 /* ============== Music Container  ===================== */
 .container--music {
@@ -509,15 +533,6 @@ a.mapboxgl-ctrl-logo,
 
 /* ============== MEDIA QUERIES (SMALL DEVICECS) ===================== */
 @media (max-width: 850px) {
-  nav {
-    flex-direction: column;
-  }
-  .nav--container {
-    flex-direction: column;
-  }
-  .btn--contact {
-    display: none;
-  }
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
     grid-auto-rows: 350px;
@@ -532,9 +547,28 @@ a.mapboxgl-ctrl-logo,
   .mapboxgl-ctrl-group:not(:empty) {
     width: 320px;
   }
+
+  .grid-item3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  .music--note {
+    height: 30px;
+  }
 }
 /* ============== MEDIA QUERIES (MEDIUM DEVICECS) ===================== */
 
+@media (max-width: 1200px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav--container {
+    flex-direction: column;
+  }
+  .btn--contact {
+    display: none;
+  }
+}
 /* ============== MEDIA QUERIES (LARGE DEVICECS) ===================== */
 
 /* ============== Animations ===================== */

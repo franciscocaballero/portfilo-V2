@@ -19,14 +19,9 @@ export const Nav = () => {
     });
   }, []);
 
-  // const onToggleClick = () => {
-  //   setIsActive(!isActive);
-  //   console.log(isActive);
-  // };
-
   return (
     <div>
-      <nav className="">
+      <nav>
         <div className="nav--container ">
           <p className="nav--logo">cisco</p>
 

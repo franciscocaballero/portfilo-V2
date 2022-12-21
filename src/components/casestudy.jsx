@@ -1,21 +1,15 @@
 import React from "react";
+import { projectItems } from "./projectItems";
 
-export const Casestudy = () => {
+export const Casestudy = (props) => {
   return (
     <div className="container container--casestudy ">
       <div className="casestudy--info">
-        <img className="casestudy--logo" src="images/fork.png" alt="form" />
+        <img className="casestudy--logo" src={props.logo} alt="form" />
         <div className="casestudy--info-box">
-          <h1>ForkyJS</h1>
-          <p className="casestudy--bio">
-            Lorem ipsum, dolor sit amet<br></br> consectetur adipisicing elit.
-            Esse vitae
-          </p>
-          <a
-            className="btn--casestudy "
-            target="_blank”"
-            href="https://fork-production.up.railway.app/#5ed6604591c37cdc054bcd09"
-          >
+          <h1>{props.title}</h1>
+          <p className="casestudy--bio">{props.description}</p>
+          <a className="btn--casestudy " target="_blank”" href={props.link}>
             <span>
               <img
                 className="btn__icon"
@@ -23,11 +17,11 @@ export const Casestudy = () => {
                 alt="minus"
               />
             </span>
-            <p>forkyJS</p>
+            <p>{props.linkTitle}</p>
           </a>
         </div>
       </div>
-      <div className="casestudy--image"></div>
+      <div className={props.backgroundImageClass}></div>
     </div>
   );
 };

@@ -23,13 +23,28 @@ export const Grid = (props) => {
           className="bgColor--purple"
         />
         <Switch toggleTheme={props.toggleTheme} checked={props.checked} />
-        <Casestudy />
-        <Casestudy />
+        <Casestudy
+          logo="images/fork.png"
+          title="ForkyJS"
+          description="ForkyJS uses Javscript to interact with the fokry API and display the information to the user in a user-friendly interface."
+          link="https://fork-production.up.railway.app/#5ed6604591c37cdc054bcd09"
+          linkTitle="forkyJS"
+          backgroundImageClass="casestudy--image"
+        />
+        <Casestudy
+          logo="images/loop.png"
+          title="LoopStudio"
+          description="LoopStudio uses CSS Grid to display the information to the user in a user-friendly interface."
+          link="https://loopingsstudios.netlify.app"
+          linkTitle="LStudio"
+          backgroundImageClass="casestudy--image-2"
+        />
+
         <Music />
         <Social
-          link="https://github.com/franciscocaballero"
-          imgSrc="images/github.png"
-          className="bgColor--purple"
+          link="https://www.linkedin.com/in/francisco-caballero/"
+          imgSrc="images/linkedin.png" //github.com/franciscocaballero"
+          className="bgColor--dark-blue"
         />
       </div>
     </div>
