@@ -4,6 +4,7 @@ const selectAllContainers = () => {
     i.classList.remove("grid-item1");
     i.classList.remove("grid-item2");
     i.classList.remove("grid-item3");
+    i.classList.remove("grid-item4");
   });
 };
 
@@ -55,6 +56,7 @@ export const MenuItems = [
         selectAllContainers();
         container[0].classList.add("grid-item1");
         container[1].classList.add("grid-item2");
+        container[2].classList.add("grid-item4");
       }
     },
   },

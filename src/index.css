@@ -135,6 +135,11 @@ nav {
   grid-column: 2;
   grid-row: 1 / 2;
 }
+
+.grid-item4 {
+  grid-column: 3;
+  grid-row: 1;
+}
 /* ============== Flex PROPS ===================== */
 .flex {
   display: flex;
@@ -312,7 +317,7 @@ input:checked + .slider:before {
   grid-column: span 2;
 }
 .child-padding {
-  padding: 45px 60px;
+  padding: 40px 60px;
 }
 .container--bio__image {
   max-width: 120px;
@@ -349,7 +354,12 @@ input:checked + .slider:before {
   background-image: linear-gradient(19deg, #a3cffb 0%, #a3cffb 100%);
 }
 .bgColor--purple {
-  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-image: linear-gradient(
+    19deg,
+    rgb(35, 35, 35) 0%,
+    rgb(39, 33, 33) 100%
+  );
+  background-color: #111;
 }
 .bgColor--dark-blue {
   background-image: linear-gradient(19deg, #0072b1 0%, #0072b1 100%);
@@ -412,6 +422,7 @@ input:checked + .slider:before {
   line-height: 30px;
   font-size: 20px;
   font-weight: 400;
+  width: 400px;
 }
 #dark .casestudy--bio {
   color: rgb(209, 209, 209);
@@ -554,11 +565,91 @@ a.mapboxgl-ctrl-logo,
   background-color: var(--color-white);
 }
 
-/* ============== MEDIA QUERIES (SMALL DEVICECS) ===================== */
-@media (max-width: 850px) {
+@media (max-width: 700px) {
+  .grid-item1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .grid-item2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .grid-item3 {
+    grid-column: 1 / 1;
+    grid-row: 2;
+  }
+  .grid-item4 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+/* ============== MEDIA QUERIES (Small Devices) ===================== */
+
+@media (max-width: 1300px) {
+  /* .grid-item1 {
+    grid-column: 1;
+    grid-row: 1;
+  } */
+  .grid-item2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  /* .grid-item3 {
+    grid-column: 1 / 1;
+    grid-row: 2;
+  } */
+  .grid-item4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .nav-menu {
+    width: 350px;
+  }
+  .nav-menu_option {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .container--bio {
+    grid-column: span 1;
+  }
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
-    grid-auto-rows: 350px;
+    grid-template-columns: 300px;
+    grid-auto-rows: 150px;
+  }
+  .child-padding {
+    padding: 30px;
+  }
+  .bio--container__bio {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .casestudy--image {
+    display: none;
+  }
+  .container--casestudy {
+    grid-column: span 1;
+  }
+  .casestudy--bio {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+
+/* ============== MEDIA QUERIES (Medium Devices) ===================== */
+@media (max-width: 1600px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav--container {
+    flex-direction: column;
+  }
+  .btn--contact {
+    display: none;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 360px));
+    grid-auto-rows: 360px;
   }
   .container--bio__image {
     width: 80px;
@@ -571,28 +662,10 @@ a.mapboxgl-ctrl-logo,
     width: 320px;
   }
 
-  .grid-item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
-  }
   .music--note {
     height: 30px;
   }
 }
-/* ============== MEDIA QUERIES (MEDIUM DEVICECS) ===================== */
-
-@media (max-width: 1200px) {
-  nav {
-    flex-direction: column;
-  }
-  .nav--container {
-    flex-direction: column;
-  }
-  .btn--contact {
-    display: none;
-  }
-}
-/* ============== MEDIA QUERIES (LARGE DEVICECS) ===================== */
 
 /* ============== Animations ===================== */
 

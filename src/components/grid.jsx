@@ -45,7 +45,7 @@ export const Grid = (props) => {
         <Music />
         <Social
           link="https://www.linkedin.com/in/francisco-caballero/"
-          imgSrc="images/linkedin.png" //github.com/franciscocaballero"
+          imgSrc="images/linkedin.png"
           className="bgColor--dark-blue"
         />
       </div>
